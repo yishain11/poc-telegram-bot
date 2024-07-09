@@ -1,4 +1,4 @@
-from telegram.ext import Updater,ConversationHandler, CommandHandler, MessageHandler, Filters, CallbackContext, CallbackQueryHandler
+from telegram.ext import CommandHandler, MessageHandler, filters, CallbackContext, CallbackQueryHandler
 import bot_functions.basic_functions as basic_fns
 import logging
 
@@ -13,5 +13,5 @@ def log_message(update, context):
     
 def set_bot_handlers(dispatcher):
     dispatcher.add_handler(CommandHandler("test", basic_fns.test))
-    dispatcher.add_handler(MessageHandler(Filters.all, log_message))
+    dispatcher.add_handler(MessageHandler(filters.ALL, log_message))
     
