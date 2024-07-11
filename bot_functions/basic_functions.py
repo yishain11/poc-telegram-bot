@@ -13,5 +13,6 @@ async def test(update, context):
 
 async def ping_server(update, context):
     answer = requests.get(server_url)   
-    await update.message.reply_text(json.dumps(answer))
+    print('answer: ', answer)
+    await update.message.reply_text(answer.json())
      
