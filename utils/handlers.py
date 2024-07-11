@@ -13,4 +13,5 @@ def log_message(update, context):
     
 def set_bot_handlers(app):
     test_handler = CommandHandler('test',basic_fns.test)
+    test_handler = CommandHandler('server',basic_fns.ping_server)
     app.add_handler(test_handler)
